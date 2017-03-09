@@ -62,3 +62,11 @@ Routes | HTTP | Description
 
 ##### Release 3
 - Refactor
+
+### Installation guide
+```
+git clone git@github.com:dikyarga/simple-api-crud.git
+cd simple-api-crud
+npm install
+npm run dev
+```
