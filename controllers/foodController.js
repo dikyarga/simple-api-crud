@@ -11,7 +11,6 @@ module.exports = {
     })
   },
   create: function(req, res, next){
-    console.log(req.body);
     let food = new Food({
       name: req.body.name,
       price: req.body.price,
@@ -29,7 +28,7 @@ module.exports = {
   show: function(req, res, next){
     Food.findById(req.params.id, function(err, food){
       if (err) {
-        console.log(err);
+        res.json(err);
       } else {
         res.json(food)
       }
