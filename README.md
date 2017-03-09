@@ -32,7 +32,6 @@ Routes | HTTP | Description
 **/api/foods/** | `POST` | Create a food
 **/api/foods/:id** | `DELETE` | Delete a food
 **/api/foods/:id** | `PUT` | Update data of a food
-**/api/foods/:id** | `PATCH` | Update data of a user with specifict food
 
 #### Restaurant
 Routes | HTTP | Description
@@ -42,7 +41,6 @@ Routes | HTTP | Description
 **/api/restaurants/** | `POST` | Create a restaurant
 **/api/restaurants/:id** | `DELETE` | Delete a restaurant
 **/api/restaurants/:id** | `PUT` | Update data of a restaurant
-**/api/restaurants/:id** | `PATCH` | Update data of a user with specifict restaurant
 
 #### NOTE
 - CRUD, careful when update.

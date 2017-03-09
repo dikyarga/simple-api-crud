@@ -43,10 +43,12 @@ module.exports = {
   },
   update: function(req, res, next){
     Food.findById(req.params.id, function(err, food){
-      if(err) throw err
+      if(err){
+        throw err
+      }
       food.name = req.body.name
       food.price = req.body.price
-      fodd.expired_date = req.body.expired_date
+      food.expired_date = req.body.expired_date
 
       food.save(function(err){
         if(err) throw err

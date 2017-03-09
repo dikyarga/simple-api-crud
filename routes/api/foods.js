@@ -11,5 +11,7 @@ router.post('/', foodController.create)
 router.get('/:id', foodController.show)
 // remove a food
 router.delete('/:id', foodController.destroy)
+// update information food
+router.put('/:id', foodController.update)
 
 module.exports = router;
