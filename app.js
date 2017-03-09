@@ -1,5 +1,8 @@
 var express = require('express');
 var path = require('path');
+var mongoose = require('mongoose')
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/midtest')
 
 var index = require('./routes/index');
 
