@@ -5,7 +5,7 @@ let mongoose = require('mongoose')
 let FoodSchema = new mongoose.Schema({
   name: String,
   price: Number,
-  expired_data: Date
+  expired_date: Date
 }, {
   timestamps: true
 })
