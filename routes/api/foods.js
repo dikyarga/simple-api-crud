@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.json({
-    msg: 'pong'
-  })
-});
+let foodController = require('../../controllers/foodController')
+
+/* GET all food. */
+router.get('/', foodController.index);
+
+router.post('/', foodController.create)
 
 module.exports = router;

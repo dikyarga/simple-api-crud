@@ -4,13 +4,14 @@ module.exports = {
   index: function(req, res, next){
     Food.find({}, function(err, foods){
       if (err) {
-        res.send(err)
+        res.json(err)
       } else {
         res.json(foods)
       }
     })
   },
   create: function(req, res, next){
+    console.log(req.body);
     let food = new Food({
       name: req.body.name,
       price: req.body.price,
@@ -19,9 +20,9 @@ module.exports = {
 
     food.save(function(err){
       if(err){
-        res.send(err)
+        res.json(err)
       } else {
-        res.send('Food saved')
+        res.json('Food saved')
       }
     })
   },
