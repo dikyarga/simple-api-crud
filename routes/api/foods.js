@@ -8,6 +8,8 @@ router.get('/', foodController.index);
 // Create a new food
 router.post('/', foodController.create)
 // Get single food
-router.get('/foods/:id', foodController.show)
+router.get('/:id', foodController.show)
+// remove a food
+router.delete('/:id', foodController.destroy)
 
 module.exports = router;
