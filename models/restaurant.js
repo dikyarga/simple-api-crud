@@ -6,7 +6,7 @@ let RestaurantSchema = new mongoose.Schema({
   name: String,
   owner: String,
   address: String,
-  address: Boolean,
+  open_status: Boolean,
 }, {
   timestamps: true
 })
