@@ -47,10 +47,10 @@ module.exports = {
       if(err){
         throw err
       }
-      restaurant.name: req.body.name,
-      restaurant.owner: req.body.owner,
-      restaurant.address: req.body.address,
-      restaurant.open_status: req.body.open_status,
+      restaurant.name = req.body.name
+      restaurant.owner = req.body.owner
+      restaurant.address = req.body.address
+      restaurant.open_status = req.body.open_status
 
       restaurant.save(function(err){
         if(err) throw err
