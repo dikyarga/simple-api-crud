@@ -5,6 +5,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/midtest')
 
 var index = require('./routes/index');
+let foods = require('./routes/api/foods')
 
 var app = express();
 
@@ -12,6 +13,7 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/api/foods', foods)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
